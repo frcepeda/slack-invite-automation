@@ -11,6 +11,8 @@ module.exports = {
   //   --data 'email=EMAIL&token=TOKEN&set_active=true' \
   //   --compressed
   slacktoken: process.env.SLACK_TOKEN || 'YOUR-ACCESS-TOKEN',
+  // the channel to invite the guests
+  channel: process.env.SLACK_CHANNEL || 'THE-CHANNEL',
   // an optional security measure - if it is set, then that token will be required to get invited.
   inviteToken: process.env.INVITE_TOKEN || null,
   // an optional security measure - if both are set, then recaptcha will be used.
