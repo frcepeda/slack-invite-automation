@@ -21,7 +21,7 @@ router.post('/invite', function(req, res) {
             email: req.body.email,
             token: config.slacktoken,
             set_active: true,
-            channels: config.channel,
+            channels: JSON.stringify([config.channel]),
             ultra_restricted: 1
           }
         }, function(err, httpResponse, body) {
